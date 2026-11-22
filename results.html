@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🧪 MediLab</h2>
+    <a href="index.html">Dashboard</a>
+    <a href="patients.html">Patients</a>
+    <a href="samples.html">Samples</a>
+    <a href="tests.html">Test Selection</a>
+    <a href="results.html" class="active">Results</a>
+    <a href="reports.html">Reports</a>
+</div>
+
+<div class="main">
+    <header><h1>Result Entry & Verification</h1></header>
+
+    <div class="panel">
+        <h2>Enter Test Result</h2>
+
+        <form id="resultForm">
+
+            <label>Select Sample</label>
+            <select id="resultSample" required>
+                <option value="">Select Sample ID</option>
+            </select>
+
+            <label>Test Result</label>
+            <input type="text" id="testResult" placeholder="Enter result" required>
+
+            <label>Reference Range</label>
+            <input type="text" id="referenceRange" placeholder="Enter reference range">
+
+            <label>Remarks</label>
+            <textarea id="remarks"></textarea>
+
+            <button type="submit" class="btn">Save Result</button>
+        </form>
+    </div>
+
+    <div class="panel">
+        <h2>Pending Verification</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Sample ID</th>
+                    <th>Patient</th>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="resultTable"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script src="samples.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="GSIVNM0seRcyG_ZjPb0gqJKRclc6nqQcW9QwgHcvgoY" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Lab Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🧪 MediLab</h2>
+    <p>Laboratory System</p>
+
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="patients.html">Patients</a>
+    <a href="samples.html">Samples</a>
+    <a href="tests.html">Test Selection</a>
+    <a href="results.html">Results</a>
+    <a href="reports.html">Reports</a>
+</div>
+
+<div class="main">
+    <header>
+        <h1>Dashboard</h1>
+        <span>Diagnostic Laboratory Management System</span>
+    </header>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Patients</h3>
+            <h1 id="totalPatients">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Total Samples</h3>
+            <h1 id="totalSamples">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Pending Samples</h3>
+            <h1 id="pendingSamples">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Completed Reports</h3>
+            <h1 id="completedReports">0</h1>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2>Quick Actions</h2>
+        <div class="actions">
+            <a href="patients.html" class="btn">+ Register Patient</a>
+            <a href="samples.html" class="btn">+ Add Sample</a>
+            <a href="results.html" class="btn">Enter Results</a>
+            <a href="reports.html" class="btn">View Reports</a>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2>Recent Samples</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sample ID</th>
+                    <th>Patient</th>
+                    <th>Test</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="recentSamples"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
